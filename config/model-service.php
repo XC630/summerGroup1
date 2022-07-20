@@ -22,7 +22,7 @@
 		(
 		'UserRepository'=>Array
 			(
-			'model'=>'App\\Models\\User',
+			'model'=> 'App\\Models\\simple',
 			'repository'=>'App\\Repositories\\UserRepository'
 			)
 		)

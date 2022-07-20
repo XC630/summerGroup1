@@ -17,7 +17,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
+/**
+ * 示例，该接口作为示范，不可调用
+ */
+Route::prefix('users')->group(function () {
+    Route::post('login', 'UsersController@login');  //用户登录
+    Route::post('registered', 'UsersController@registered');  //用户注册
+    Route::post('again', 'UsersController@again');  //修改用户密码
+});
 
 
 
